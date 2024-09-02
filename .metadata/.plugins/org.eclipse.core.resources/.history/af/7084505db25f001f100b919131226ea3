@@ -1,0 +1,19 @@
+package com;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.net.InetAddress;
+import java.net.Socket;
+import java.net.UnknownHostException;
+
+public class Client {
+	
+	public static void main(String[] args) throws UnknownHostException,IOException {
+		int port = 8010;
+		InetAddress address = InetAddress.getByName("localhost");
+		Socket socket = new Socket(address,port);
+		
+		PrintWriter toSocket = new PrintWriter(socket.getOutputStream());
+		
+	}
+}
